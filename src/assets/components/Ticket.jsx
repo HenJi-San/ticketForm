@@ -12,8 +12,7 @@ import ticketPattern from "../images/pattern-ticket.svg"
 import logo from "../images/logo-full.svg"
 import gitIcon from "../images/icon-github.svg"
 
-const Ticket = () => {
-    const [ticket, setTicket] = useState([])
+const Ticket = ( {values} ) => {
 
     const getDate = () => {
         const date = new Date();
@@ -23,13 +22,6 @@ const Ticket = () => {
           year: "numeric",
         }).format(date);
     }
-
-    useEffect(() => {
-        fetch("http://127.0.0.1:5000/ticket")
-            .then((res) => res.json())
-            .then((data) => setTicket(data))
-            .catch((err) => console.error("Error fetching tickets:", err));
-    }, []);
 
     const getTimeZone = () => {
         const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -48,7 +40,7 @@ const Ticket = () => {
                     textAlign="center"
                     transform="translateY(-50%) rotate(90deg)"
                 >
-                    <Text textStyle="3xl" color="whiteAlpha.900/20">#{ticket.code}</Text>
+                    <Text textStyle="3xl" color="whiteAlpha.900/20">#{values.code}</Text>
                 </Box>    
                 <Box
                     position="absolute"
