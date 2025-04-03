@@ -58,8 +58,8 @@ const FormSection = ({ setSuccessSubmit, setFormData }) => {
     });
     
     return (
-        <VStack p={10}>
-            <Box w="50%">
+        <VStack p={10} w="full">
+            <Box w={{ base: "90%", md: "70%", lg: "50%" }}>
             <Formik 
                 initialValues={formikValues}
                 validationSchema={formValidation}
@@ -82,7 +82,7 @@ const FormSection = ({ setSuccessSubmit, setFormData }) => {
             >
             {(props) => (
             <Form>
-                <VStack spaceY={2}>
+                <VStack spacing={4}>
                     <Field.Root invalid={imageVal}>
                         <Field.Label>Upload File</Field.Label>
                         <FileUploadRoot 
@@ -124,12 +124,12 @@ const FormSection = ({ setSuccessSubmit, setFormData }) => {
                                         overflow="hidden"
                                         borderWidth="2px"
                                         borderColor="gray.500"
-                                        boxSize="70px"
+                                        boxSize={{ base: "50px", md: "70px" }}
                                     >
                                         <Image
                                             src={URL.createObjectURL(uploadedFiles[0])}
                                             alt="Uploaded Avatar"
-                                            boxSize="70px"
+                                            boxSize="full"
                                             objectFit="cover"
                                         />
                                     </Box>

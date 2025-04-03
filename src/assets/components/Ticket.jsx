@@ -29,8 +29,8 @@ const Ticket = ( {values} ) => {
     };
 
     return (
-        <VStack pt={16}>
-            <Box key={values.id} position="relative" width="70%" height="100%">
+        <VStack pt={16} w="full">
+            <Box key={values.id} position="relative" width={{ base: "90%", md: "70%" }} height="100%">
                 <Image src={ticketPattern} w="full" h="full" objectFit="cover"/>
                 <Box
                     position="absolute"
@@ -40,7 +40,7 @@ const Ticket = ( {values} ) => {
                     textAlign="center"
                     transform="translateY(-50%) rotate(90deg)"
                 >
-                    <Text textStyle="3xl" color="whiteAlpha.900/20">#{values.code}</Text>
+                    <Text fontSize={{ base: "lg", md: "3xl" }} color="whiteAlpha.900/20">#{values.code}</Text>
                 </Box>    
                 <Box
                     position="absolute"
@@ -50,8 +50,10 @@ const Ticket = ( {values} ) => {
                     textAlign="left"
                 >
                     <HStack flexWrap="wrap" alignItems="center">
-                        <Image boxSize="50%" src={logo}/>
-                        <Text ml={16} fontSize="md" color="gray.300">{getDate()} / {getTimeZone()}</Text>
+                        <Image boxSize={{ base: "40%", md: "50%" }} src={logo}/>
+                        <Text ml={{ base: 4, md: 16 }} fontSize={{ base: "sm", md: "md" }} color="gray.300">
+                            {getDate()} / {getTimeZone()}
+                        </Text>
                     </HStack>
                     
                 </Box>
@@ -62,21 +64,25 @@ const Ticket = ( {values} ) => {
                     color="white"
                     textAlign="left"
                 >
-                    <HStack gap={4}>
+                    <HStack gap={4} flexWrap="wrap">
                         <Image 
                             src={values.image}
                             alt="Uploaded Avatar"
-                            boxSize="15%"
+                            boxSize={{ base: "20%", md: "15%" }}
                             borderRadius="15%"
                             aspectRatio={1}
                         />
-                        <VStack gap={1} alignItems="left">
-                            <Text textStyle="3xl">{values.fullName}</Text>
+                        <VStack gap={1} alignItems="flex-start">
+                            <Text fontSize={{ base: "lg", md: "3xl" }} fontWeight="bold">
+                                {values.fullName}
+                            </Text>
                             <HStack gap={1}>
                                 <Icon>
                                     <img src={gitIcon} alt="Github Icon" />
                                 </Icon>
-                                <Text textStyle="xl" color="gray.300">@{values.github}</Text>
+                                <Text fontSize={{ base: "sm", md: "xl" }} color="gray.300">
+                                    @{values.github}
+                                </Text>
                             </HStack>
                             
                         </VStack>
