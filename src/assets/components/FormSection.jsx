@@ -58,8 +58,8 @@ const FormSection = ({ setSuccessSubmit, setFormData }) => {
     });
     
     return (
-        <VStack p={10} w="full">
-            <Box w={{ base: "90%", md: "70%", lg: "50%" }}>
+        <VStack p={{ base: 4, md: 10 }} w="full" zIndex="max">
+            <Box w={{ base: "100%", sm: "90%", md: "70%", lg: "50%" }}>
             <Formik 
                 initialValues={formikValues}
                 validationSchema={formValidation}
@@ -82,7 +82,7 @@ const FormSection = ({ setSuccessSubmit, setFormData }) => {
             >
             {(props) => (
             <Form>
-                <VStack spacing={4}>
+                <VStack spacing={{ base: 3, md: 4 }}>
                     <Field.Root invalid={imageVal}>
                         <Field.Label>Upload File</Field.Label>
                         <FileUploadRoot 
@@ -229,6 +229,7 @@ const FormSection = ({ setSuccessSubmit, setFormData }) => {
                             GitHub
                         </Field.Label>
                         <Input
+                            zIndex="max"
                             type="text"
                             placeholder="@yourname"
                             value={props.values.github}
@@ -240,7 +241,7 @@ const FormSection = ({ setSuccessSubmit, setFormData }) => {
                         />
                         <Field.ErrorText>{props.errors.github}</Field.ErrorText>
                     </Field.Root>
-                    <Button disabled={uploadedFiles.length == 0 || imageVal} type="submit" bg="red.400" width="full">
+                    <Button disabled={uploadedFiles.length == 0 || imageVal} zIndex="max" type="submit" bg="red.400" width="full">
                         Generate My Ticket
                     </Button>
                 </VStack>
