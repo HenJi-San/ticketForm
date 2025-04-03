@@ -36,6 +36,7 @@ function App() {
       display="flex"
       justifyContent="center"
       alignItems="center"
+      overflow="hidden"
     >
       <Box 
         px={{ base: "1rem", sm: "2rem", md: "4rem", lg: "6rem" }}
