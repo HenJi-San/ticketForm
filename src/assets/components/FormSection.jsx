@@ -114,7 +114,7 @@ const FormSection = ({ setSuccessSubmit, setFormData }) => {
                                     borderWidth="2px" 
                                     borderStyle="dashed" 
                                     borderRadius="6px" 
-                                    p={4} 
+                                    p={{base: 6, md: 4}} 
                                     minH="36" 
                                     bg="gray.700/20"
                                     _hover={{bg:"gray.700/30"}}
@@ -124,7 +124,7 @@ const FormSection = ({ setSuccessSubmit, setFormData }) => {
                                         overflow="hidden"
                                         borderWidth="2px"
                                         borderColor="gray.500"
-                                        boxSize={{ base: "50px", md: "70px" }}
+                                        boxSize={{ base: "60px", md: "80px" }}
                                     >
                                         <Image
                                             src={URL.createObjectURL(uploadedFiles[0])}

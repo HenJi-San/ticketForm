@@ -7,13 +7,13 @@ import {
 
 const TitleSection = ({ successSubmit, values}) => {
     const headingStart=(
-        <Text lineHeight={{ base: "short", md: "normal" }} fontSize={{ base: "2xl", md: "6xl" }}>
+        <Text lineHeight={{ base: "short", md: "normal" }} fontSize={{ base: "3xl", md: "6xl" }}>
             Your Journey to Coding Conf 2025 Starts Here!
         </Text>
     )
 
     const headingEnd=(
-        <Text lineHeight={{ base: "short", md: "normal" }} fontSize={{ base: "2xl", md: "6xl" }}>
+        <Text lineHeight={{ base: "short", md: "normal" }} fontSize={{ base: "3xl", md: "6xl" }}>
             Congrats, {" "}
             <Text 
                 as="span" 
@@ -44,9 +44,9 @@ const TitleSection = ({ successSubmit, values}) => {
     )
     return (
         <VStack gap={{ base: 4, md: 6 }} p={6} w="full" textAlign="center">
-            <Heading size="6xl" fontSize={{ base: "2xl", md: "6xl" }}>{successSubmit ? headingEnd : headingStart}</Heading>
+            <Heading fontSize={{ base: "3xl", md: "6xl" }}>{successSubmit ? headingEnd : headingStart}</Heading>
             {successSubmit ? (
-                <Text textStyle="2xl" w={{ base: "90%", md: "65%" }}>
+                <Text textStyle="xl" w={{ base: "90%", md: "65%" }}>
                     We have emailed your ticket to {" "}
                     <Text 
                         as="span" 
