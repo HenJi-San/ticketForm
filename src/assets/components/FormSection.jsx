@@ -72,19 +72,8 @@ const FormSection = ({ setSuccessSubmit, setFormData }) => {
                         github: values.github,
                         code: Math.floor(10000 + Math.random() * 90000).toString()
                     }
-
-                    const response = await fetch("http://127.0.0.1:5000/submit", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify(formData),
-                    });
-              
-                    const result = await response.json();
-                    if (result.success) {
-                        const ticketResponse = await fetch(`http://127.0.0.1:5000/ticket/${result.id}`);
-                        const ticketData = await ticketResponse.json();
-                        setFormData(ticketData); 
-                    }
+                    console.log("Generated formData:", formData);
+                    setFormData(formData); 
                     actions.resetForm();
                     setUploadedFiles([]);
                     setImageVal(false)
