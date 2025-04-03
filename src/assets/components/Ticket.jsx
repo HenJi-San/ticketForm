@@ -81,7 +81,7 @@ const Ticket = ( {values} ) => {
                                     <img src={gitIcon} alt="Github Icon" />
                                 </Icon>
                                 <Text fontSize={{ base: "sm", md: "xl" }} color="gray.300">
-                                    @{values.github}
+                                    {values.github}
                                 </Text>
                             </HStack>
                             
