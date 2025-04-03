@@ -7,11 +7,14 @@ import {
 
 const TitleSection = ({ successSubmit, values}) => {
     const headingStart=(
-        <p>Your Journey to Coding Conf 2025 Starts Here!</p>
+        <Text lineHeight={{ base: "short", md: "normal" }} fontSize={{ base: "2xl", md: "6xl" }}>
+            Your Journey to Coding Conf 2025 Starts Here!
+        </Text>
     )
 
     const headingEnd=(
-        <Text>Congrats, {" "}
+        <Text lineHeight={{ base: "short", md: "normal" }} fontSize={{ base: "2xl", md: "6xl" }}>
+            Congrats, {" "}
             <Text 
                 as="span" 
                 bgGradient="linear-gradient(90deg, rgb(252, 119, 119) 0%, rgba(255,255,255,1) 100%)" 
@@ -24,10 +27,10 @@ const TitleSection = ({ successSubmit, values}) => {
     )
 
     const textStart= (
-        <Text w="90%">Secure your spot at next year's biggest coding conference.</Text>
+        <Text w="90%" fontSize={{ base: "xs", md: "md" }}>Secure your spot at next year's biggest coding conference.</Text>
     )
     const textEnd=(
-        <Text textStyle="2xl" w="65%">
+        <Text textStyle="2xl" w="65%" fontSize={{ base: "xs", md: "md" }}>
             We have emailed your ticket to {" "}
             <Text 
                 as="span" 
@@ -40,9 +43,23 @@ const TitleSection = ({ successSubmit, values}) => {
         </Text>
     )
     return (
-        <VStack gap={6} p={6}>
-            <Heading size="6xl">{successSubmit ? headingEnd : headingStart}</Heading>
-            {successSubmit ? textEnd : textStart}
+        <VStack gap={{ base: 4, md: 6 }} p={6} w="full" textAlign="center">
+            <Heading size="6xl" fontSize={{ base: "2xl", md: "6xl" }}>{successSubmit ? headingEnd : headingStart}</Heading>
+            {successSubmit ? (
+                <Text textStyle="2xl" w={{ base: "90%", md: "65%" }}>
+                    We have emailed your ticket to {" "}
+                    <Text 
+                        as="span" 
+                        bgColor="rgb(255, 119, 119)" 
+                        bgClip="text"
+                    >
+                        {values.email}
+                    </Text> {" "}
+                    and will send updates in the run up to the event.
+                </Text>
+            ) : (
+                <Text w={{ base: "90%", md: "65%" }}>Secure your spot at next year's biggest coding conference.</Text>
+            )}
         </VStack>
     )
 }

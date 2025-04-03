@@ -4,6 +4,7 @@ import FormSection from './assets/components/FormSection'
 import Ticket from './assets/components/Ticket'
 import './App.css'
 import React, {useState} from "react";
+import { Box } from "@chakra-ui/react";
 
 function App() {
   const [successSubmit, setSuccessSubmit] = useState(false)
@@ -16,7 +17,7 @@ function App() {
   })
 
   return (
-    <>
+    <Box px={{ base: "1rem", md: "6rem" }}>
       <Header/>
       <TitleSection values={formData} successSubmit={successSubmit}/>
       {successSubmit ? (
@@ -24,7 +25,7 @@ function App() {
       ) :
         <FormSection setSuccessSubmit={setSuccessSubmit} setFormData={setFormData}/>
       }
-    </>
+    </Box>
   )
 }
 
