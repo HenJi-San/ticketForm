@@ -86,6 +86,7 @@ const FormSection = ({ setSuccessSubmit, setFormData }) => {
                     <Field.Root invalid={imageVal}>
                         <Field.Label>Upload File</Field.Label>
                         <FileUploadRoot 
+                            zIndex="max"
                             value={uploadedFiles}
                             required
                             accept="image/*"
@@ -197,6 +198,7 @@ const FormSection = ({ setSuccessSubmit, setFormData }) => {
                             Full Name
                         </Field.Label>
                         <Input
+                            zIndex="max"
                             type="text"
                             placeholder="Enter your full name"
                             value={props.values.fullName}
@@ -213,6 +215,7 @@ const FormSection = ({ setSuccessSubmit, setFormData }) => {
                             Email
                         </Field.Label>
                         <Input
+                            zIndex="max"
                             type="email"
                             placeholder="example@email.com"
                             value={props.values.email}
