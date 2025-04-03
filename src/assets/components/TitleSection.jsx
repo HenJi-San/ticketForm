@@ -7,13 +7,13 @@ import {
 
 const TitleSection = ({ successSubmit, values}) => {
     const headingStart=(
-        <Text lineHeight={{ base: "short", md: "normal" }} fontSize={{ base: "2xl", md: "6xl" }}>
+        <Text lineHeight={{ base: "short", md: "normal" }} fontSize={{ base: "3xl", md: "6xl" }}>
             Your Journey to Coding Conf 2025 Starts Here!
         </Text>
     )
 
     const headingEnd=(
-        <Text lineHeight={{ base: "short", md: "normal" }} fontSize={{ base: "2xl", md: "6xl" }}>
+        <Text lineHeight={{ base: "short", md: "normal" }} fontSize={{ base: "3xl", md: "6xl" }}>
             Congrats, {" "}
             <Text 
                 as="span" 

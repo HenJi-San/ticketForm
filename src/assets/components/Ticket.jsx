@@ -51,7 +51,7 @@ const Ticket = ( {values} ) => {
                 >
                     <HStack flexWrap="wrap" alignItems="center">
                         <Image boxSize={{ base: "40%", md: "50%" }} src={logo}/>
-                        <Text ml={{ base: 4, md: 16 }} fontSize={{ base: "sm", md: "md" }} color="gray.300">
+                        <Text ml={{ base: 7, sm: 5, md: 16 }} fontSize={{ base: "2xs", md: "sm" }} color="gray.300">
                             {getDate()} / {getTimeZone()}
                         </Text>
                     </HStack>
