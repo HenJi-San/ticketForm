@@ -29,8 +29,8 @@ const Ticket = ( {values} ) => {
     };
 
     return (
-        <VStack pt={16} w="full">
-            <Box key={values.id} position="relative" width={{ base: "90%", md: "70%" }} height="100%">
+        <VStack pt={{ base: 8, md: 16 }} w="full">
+            <Box key={values.id} position="relative" width={{ base: "100%", sm: "90%", md: "70%" }} height="100%">
                 <Image src={ticketPattern} w="full" h="full" objectFit="cover"/>
                 <Box
                     position="absolute"

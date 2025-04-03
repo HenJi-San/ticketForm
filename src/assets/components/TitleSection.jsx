@@ -43,10 +43,12 @@ const TitleSection = ({ successSubmit, values}) => {
         </Text>
     )
     return (
-        <VStack gap={{ base: 4, md: 6 }} p={6} w="full" textAlign="center">
-            <Heading size="6xl" fontSize={{ base: "2xl", md: "6xl" }}>{successSubmit ? headingEnd : headingStart}</Heading>
+        <VStack gap={{ base: 3, md: 6 }} p={{ base: 4, md: 6 }} w="full" textAlign="center">
+            <Heading size="6xl" fontSize={{ base: "xl", sm: "2xl", md: "6xl" }}>
+                {successSubmit ? headingEnd : headingStart}
+            </Heading>
             {successSubmit ? (
-                <Text textStyle="2xl" w={{ base: "90%", md: "65%" }}>
+                <Text textStyle="2xl" w={{ base: "100%", sm: "90%", md: "65%" }} fontSize={{ base: "sm", md: "md" }}>
                     We have emailed your ticket to {" "}
                     <Text 
                         as="span" 
@@ -58,7 +60,9 @@ const TitleSection = ({ successSubmit, values}) => {
                     and will send updates in the run up to the event.
                 </Text>
             ) : (
-                <Text w={{ base: "90%", md: "65%" }}>Secure your spot at next year's biggest coding conference.</Text>
+                <Text w={{ base: "100%", sm: "90%", md: "65%" }} fontSize={{ base: "sm", md: "md" }}>
+                    Secure your spot at next year's biggest coding conference.
+                </Text>
             )}
         </VStack>
     )
