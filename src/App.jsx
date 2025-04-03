@@ -33,10 +33,11 @@ function App() {
       bgPosition="center"
       minHeight="100vh"
       minWidth="100vw"
+      width="100%"
       display="flex"
       justifyContent="center"
       alignItems="center"
-      overflow="hidden"
+      overflowX="hidden"
     >
       <Box 
         px={{ base: "1rem", sm: "2rem", md: "4rem", lg: "6rem" }}

@@ -43,7 +43,7 @@ const TitleSection = ({ successSubmit, values}) => {
         </Text>
     )
     return (
-        <VStack gap={{ base: 3, md: 6 }} p={{ base: 4, md: 6 }} w="full" textAlign="center">
+        <VStack gap={{ base: 3, md: 6 }} p={{ base: 4, md: 6 }} w="full" textAlign="center" width="100%">
             <Heading size="6xl" fontSize={{ base: "xl", sm: "2xl", md: "6xl" }}>
                 {successSubmit ? headingEnd : headingStart}
             </Heading>

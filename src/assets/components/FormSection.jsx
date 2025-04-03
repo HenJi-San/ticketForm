@@ -58,7 +58,7 @@ const FormSection = ({ setSuccessSubmit, setFormData }) => {
     });
     
     return (
-        <VStack p={{ base: 4, md: 10 }} w="full" zIndex="max">
+        <VStack p={{ base: 4, md: 10 }} w="full" zIndex="max" width="100%">
             <Box w={{ base: "100%", sm: "90%", md: "70%", lg: "50%" }}>
             <Formik 
                 initialValues={formikValues}
@@ -82,7 +82,7 @@ const FormSection = ({ setSuccessSubmit, setFormData }) => {
             >
             {(props) => (
             <Form>
-                <VStack spacing={{ base: 3, md: 4 }}>
+                <VStack spacing={{ base: 3, md: 4 }} width="100%">
                     <Field.Root invalid={imageVal}>
                         <Field.Label>Upload File</Field.Label>
                         <FileUploadRoot 
