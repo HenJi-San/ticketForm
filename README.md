@@ -1,9 +1,6 @@
 # 🎟️ TicketForm — Coding Conf Ticket Generator  
 
-A responsive front-end project built with **React**, **Vite**, and **Chakra UI**, showcasing dynamic form validation and live ticket generation.  
-
-🔗 **Live Demo:** [stylekyoku.github.io/ticketForm](https://stylekyoku.github.io/ticketForm)  
-💻 **Repository:** [github.com/StyleKyoku/ticketForm](https://github.com/StyleKyoku/ticketForm)
+[**Live Demo**](https://stylekyoku.github.io/biography/)
 
 ---
 
